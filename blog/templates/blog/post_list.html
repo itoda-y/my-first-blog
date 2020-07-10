@@ -9,37 +9,26 @@
     <div>
       <h1>
         <a href="/">
-          jjjjjjjjj
+          目次的な
         </a>
       </h1>
     </div>
 
-    <div>
-      <p>
-        published: aaaaaaa
-      </p>
-      <h2>
-        <a href="">
-          My first web
-        </a>
-      </h2>
-      <p>
-        ああああああ
-      </p>
-    </div>
+    {% for post in posts %}
+      <div>
+        <p>
+          published: {{ post.published_date }}
+        </p>
+        <h2>
+          <a href="">
+            {{ post.title }}
+          </a>
+        </h2>
+        <p>
+          {{ post.text|linebreaksbr}}
+        </p>
+      </div>
+    {% endfor %}
 
-    <div>
-      <p>
-        公開日：aaaaaaa
-      </p>
-      <h2>
-        <a href="">
-          2nd post
-        </a>
-      </h2>
-      <p>
-        こんにちは
-      </p>
-    </div>
   </body>
 </html>
